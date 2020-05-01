@@ -45,3 +45,34 @@ def separa_generos(list_students):
             eH = eH + 1
             X = X + 1
             
+print("MUJERES: ")
+        while i < eM:
+                print(list_M[i].get_name() + " " + list_M[i].get_gender())
+                print("HOMBRES: ")
+        for i in list_H:
+                print(list_H[i].get_name() + " " + list_H[i].get_gender())
+                    
+        return 0
+
+def main():
+    options = 1
+    list_stud = []
+    while options != "0":
+        options = input("menu opciones 1. crea estudiantes - 2.ordena edades - 3.separa generos - 0. salir: ")
+        if options == "1":
+            print("crea estudiantes")
+            count_x = input("cuantos estudiantes daremos de alta: ")
+            list_stud = crea_estudiantes(count_x)
+        if options == "2":
+            print("ordena edades")
+            li = list_stud
+            ordena_edades(li)
+        if options == "3":
+            print("separa generos")
+            li = list_stud
+            separa_generos(li)
+        
+if _name_ == "main":
+    main()
+    
+main()
